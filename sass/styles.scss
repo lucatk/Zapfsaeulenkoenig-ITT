@@ -3,4 +3,63 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+html, body {
+  height: 100%;
+}
+
+nav {
+  .nav-wrapper {
+    //  Fuege dem Navbar Wrapper ein Padding hinzu
+    padding: 0 25px;
+    .brand-logo {
+      color: #fbc02d;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.valign-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.card {
+  &#price-card {
+    width: 40%;
+    margin: 0 auto;
+    height: 0;
+    padding: 20% 0;
+    border-radius: 50%;
+    position: relative;
+    .card-content {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      width: 100%;
+      p {
+        color: #fbc02d;
+        text-align: center;
+        margin: 0;
+        &.heading {
+          text-transform: lowercase;
+          font-size: 22px;
+        }
+        &.text {
+          margin-top: -15px;
+          font-size: 60px;
+          span {
+            font-size: 32px;
+            vertical-align: super;
+          }
+        }
+      }
+    }
+  }
+  &#location-card {
+    width: 65%;
+    margin: 100px auto 0;
+  }
+}
