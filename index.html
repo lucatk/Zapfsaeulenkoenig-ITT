@@ -10,6 +10,7 @@
     <!-- Importiere Google Icon Font -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Importiere materialize.css und eigener Style -->
+    <link type="text/css" rel="stylesheet" href="css/nouislider.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/styles.css"/>
   </head>
@@ -34,14 +35,44 @@
         </div>
         <div id="location-card" class="card">
           <div class="card-content white-text">
-            s
+            <form>
+              <div class="row">
+                <div class="input-field col s8">
+                  <input placeholder="70176 Stuttgart" id="inputPLZ" type="text">
+                  <label for="inputPLZ">PLZ oder Ort</label>
+                </div>
+                <div class="input-field col s4">
+                  <select>
+                    <option value="1" selected>E5</option>
+                    <option value="2">E10</option>
+                    <option value="3">Diesel</option>
+                  </select>
+                  <label>Typ</label>
+                </div>
+              </div>
+              <div class="input-field">
+              </div>
+              <p class="range-field">
+                <label for="inputRange">Suchradius (in km)</label>
+                <div id="inputRange"></div>
+              </p>
+              <a class="waves-effect waves-light btn">Suchen</a>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="map-container">
+      <div class="map"></div>
+    </div>
+
     <!-- Importiere jQuery vor materialize.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="js/wNumb.js"></script>
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/materialize/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyG9pHhx9Ug6mEECNb8YxNc0P1qDvX18U&callback=initMap" async defer></script>
   </body>
 </html>

@@ -24,6 +24,10 @@ nav {
   left: 0;
   width: 50%;
   height: 100%;
+  -webkit-box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
+  -moz-box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
+  box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
+  z-index: 1;
 }
 
 .card {
@@ -61,5 +65,31 @@ nav {
   &#location-card {
     width: 65%;
     margin: 100px auto 0;
+  }
+}
+
+form {
+  color: #000;
+  text-align: center;
+  .row {
+    margin-bottom: 0;
+  }
+  #inputRange {
+    margin-top: 5px;
+  }
+  a {
+    margin-top: 25px;
+  }
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+
+  .map {
+    height: 100%;
   }
 }

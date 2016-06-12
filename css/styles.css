@@ -24,9 +24,13 @@ nav .nav-wrapper .brand-logo {
   left: 0;
   width: 50%;
   height: 100%;
+  -webkit-box-shadow: 7px 0px 13px 0px rgba(64, 64, 64, 0.65);
+  -moz-box-shadow: 7px 0px 13px 0px rgba(64, 64, 64, 0.65);
+  box-shadow: 7px 0px 13px 0px rgba(64, 64, 64, 0.65);
+  z-index: 1;
 }
 
-/* line 30, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 .card#price-card {
   width: 40%;
   margin: 0 auto;
@@ -35,36 +39,67 @@ nav .nav-wrapper .brand-logo {
   border-radius: 50%;
   position: relative;
 }
-/* line 37, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 .card#price-card .card-content {
   position: absolute;
   top: 20%;
   left: 0;
   width: 100%;
 }
-/* line 42, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
 .card#price-card .card-content p {
   color: #fbc02d;
   text-align: center;
   margin: 0;
 }
-/* line 46, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 .card#price-card .card-content p.heading {
   text-transform: lowercase;
   font-size: 22px;
 }
-/* line 50, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 .card#price-card .card-content p.text {
   margin-top: -15px;
   font-size: 60px;
 }
-/* line 53, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .card#price-card .card-content p.text span {
   font-size: 32px;
   vertical-align: super;
 }
-/* line 61, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 .card#location-card {
   width: 65%;
   margin: 100px auto 0;
+}
+
+/* line 71, ../sass/styles.scss */
+form {
+  color: #000;
+  text-align: center;
+}
+/* line 74, ../sass/styles.scss */
+form .row {
+  margin-bottom: 0;
+}
+/* line 77, ../sass/styles.scss */
+form #inputRange {
+  margin-top: 5px;
+}
+/* line 80, ../sass/styles.scss */
+form a {
+  margin-top: 25px;
+}
+
+/* line 85, ../sass/styles.scss */
+.map-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+/* line 92, ../sass/styles.scss */
+.map-container .map {
+  height: 100%;
 }

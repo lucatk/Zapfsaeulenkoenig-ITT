@@ -3797,8 +3797,8 @@ td, th {
 }
 /* line 548, ../sass/components/_global.scss */
 .collection .collection-item.active {
-  background-color: #26a69a;
-  color: #eafaf9;
+  background-color: #fbc02d;
+  color: white;
 }
 /* line 552, ../sass/components/_global.scss */
 .collection .collection-item.active .secondary-content {
@@ -3808,7 +3808,7 @@ td, th {
 .collection a.collection-item {
   display: block;
   transition: .25s;
-  color: #26a69a;
+  color: #fbc02d;
 }
 /* line 562, ../sass/components/_global.scss */
 .collection a.collection-item:not(.active):hover {
@@ -3832,7 +3832,7 @@ td, th {
 /* line 584, ../sass/components/_global.scss */
 .secondary-content {
   float: right;
-  color: #26a69a;
+  color: #fbc02d;
 }
 
 /* line 588, ../sass/components/_global.scss */
@@ -3858,7 +3858,7 @@ span.badge.new {
   font-weight: 300;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   border-radius: 2px;
 }
 /* line 614, ../sass/components/_global.scss */
@@ -3895,7 +3895,7 @@ nav ul a span.badge {
   height: 4px;
   display: block;
   width: 100%;
-  background-color: #acece6;
+  background-color: #fffcf5;
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
@@ -3906,12 +3906,12 @@ nav ul a span.badge {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   transition: width .3s linear;
 }
 /* line 658, ../sass/components/_global.scss */
 .progress .indeterminate {
-  background-color: #26a69a;
+  background-color: #fbc02d;
 }
 /* line 660, ../sass/components/_global.scss */
 .progress .indeterminate:before {
@@ -5632,7 +5632,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
@@ -5640,7 +5640,7 @@ small {
 }
 /* line 61, ../sass/components/_buttons.scss */
 .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #fbc846;
 }
 
 /* line 68, ../sass/components/_buttons.scss */
@@ -5654,7 +5654,7 @@ small {
   height: 37px;
   line-height: 37px;
   padding: 0;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
@@ -5671,7 +5671,7 @@ small {
 }
 /* line 94, ../sass/components/_buttons.scss */
 .btn-floating:hover {
-  background-color: #26a69a;
+  background-color: #fbc02d;
 }
 /* line 99, ../sass/components/_buttons.scss */
 .btn-floating:before {
@@ -5812,7 +5812,7 @@ button.btn-floating {
 /* line 37, ../sass/components/_dropdown.scss */
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #26a69a;
+  color: #fbc02d;
   display: block;
   line-height: 22px;
   padding: 14px 16px;
@@ -6222,13 +6222,13 @@ a.waves-effect .waves-ripple {
 
 /* line 2, ../sass/components/forms/_forms.scss */
 select:focus {
-  outline: 1px solid #c9f3ef;
+  outline: 1px solid white;
 }
 
 /* line 6, ../sass/components/forms/_forms.scss */
 button:focus {
   outline: none;
-  background-color: #2ab7a9;
+  background-color: #fbc641;
 }
 
 /* line 11, ../sass/components/forms/_forms.scss */
@@ -6362,8 +6362,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #fbc02d;
+  box-shadow: 0 1px 0 0 #fbc02d;
 }
 /* line 73, ../sass/components/forms/_input-fields.scss */
 input:not([type]):focus:not([readonly]) + label,
@@ -6379,7 +6379,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: #fbc02d;
 }
 /* line 78, ../sass/components/forms/_input-fields.scss */
 input:not([type]).valid, input:not([type]):focus.valid,
@@ -6567,7 +6567,7 @@ textarea.materialize-textarea + label:after {
 }
 /* line 151, ../sass/components/forms/_input-fields.scss */
 .input-field .prefix.active {
-  color: #26a69a;
+  color: #fbc02d;
 }
 /* line 154, ../sass/components/forms/_input-fields.scss */
 .input-field .prefix ~ input,
@@ -6734,13 +6734,13 @@ textarea.materialize-textarea {
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
-  border: 2px solid #26a69a;
+  border: 2px solid #fbc02d;
 }
 
 /* line 71, ../sass/components/forms/_radio-buttons.scss */
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-  background-color: #26a69a;
+  background-color: #fbc02d;
   z-index: 0;
 }
 
@@ -6883,8 +6883,8 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #26a69a;
-  border-bottom: 2px solid #26a69a;
+  border-right: 2px solid #fbc02d;
+  border-bottom: 2px solid #fbc02d;
   transform: rotate(40deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%;
@@ -6904,7 +6904,7 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #26a69a;
+  border-right: 2px solid #fbc02d;
   border-bottom: none;
   transform: rotate(90deg);
   backface-visibility: hidden;
@@ -6971,8 +6971,8 @@ form p:last-child {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #26a69a;
-  background-color: #26a69a;
+  border: 2px solid #fbc02d;
+  background-color: #fbc02d;
   z-index: 0;
 }
 /* line 189, ../sass/components/forms/_checkboxes.scss */
@@ -6984,8 +6984,8 @@ form p:last-child {
 /* line 195, ../sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
-  background-color: #26a69a;
-  border-color: #26a69a;
+  background-color: #fbc02d;
+  border-color: #fbc02d;
 }
 /* line 202, ../sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
@@ -7031,11 +7031,11 @@ form p:last-child {
 }
 /* line 21, ../sass/components/forms/_switches.scss */
 .switch label input[type=checkbox]:checked + .lever {
-  background-color: #84c7c1;
+  background-color: #f3e1b5;
 }
 /* line 24, ../sass/components/forms/_switches.scss */
 .switch label input[type=checkbox]:checked + .lever:after {
-  background-color: #26a69a;
+  background-color: #fbc02d;
   left: 24px;
 }
 
@@ -7071,7 +7071,7 @@ form p:last-child {
 /* line 60, ../sass/components/forms/_switches.scss */
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
-  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(38, 166, 154, 0.1);
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(251, 192, 45, 0.1);
 }
 
 /* line 65, ../sass/components/forms/_switches.scss */
@@ -7301,7 +7301,7 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   top: 10px;
   margin-left: -6px;
   transform-origin: 50% 50%;
@@ -7312,7 +7312,7 @@ input[type=range] + .thumb .value {
   display: block;
   width: 30px;
   text-align: center;
-  color: #26a69a;
+  color: #fbc02d;
   font-size: 0;
   transform: rotate(45deg);
 }
@@ -7347,7 +7347,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   transform-origin: 50% 50%;
   margin: -5px 0 0 0;
   transition: .3s;
@@ -7378,7 +7378,7 @@ input[type=range]::-moz-range-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #26a69a;
+  background: #fbc02d;
   margin-top: -5px;
 }
 
@@ -7419,7 +7419,7 @@ input[type=range]::-ms-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #26a69a;
+  background: #fbc02d;
 }
 
 /* line 153, ../sass/components/forms/_range.scss */
@@ -7534,11 +7534,11 @@ input[type=range]:focus::-ms-fill-upper {
 }
 /* line 61, ../sass/components/_sideNav.scss */
 .side-nav a.btn:hover, .side-nav a.btn-large:hover, .side-nav a.btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #fbc846;
 }
 /* line 63, ../sass/components/_sideNav.scss */
 .side-nav a.btn-floating:hover {
-  background-color: #26a69a;
+  background-color: #fbc02d;
 }
 
 /* line 69, ../sass/components/_sideNav.scss */
@@ -7667,7 +7667,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100%;
   height: 100%;
   opacity: 0;
-  border-color: #26a69a;
+  border-color: #fbc02d;
 }
 
 /* line 69, ../sass/components/_preloader.scss */
@@ -8763,7 +8763,7 @@ input[type=range]:focus::-ms-fill-upper {
 /* line 314, ../sass/components/date_picker/_default.date.scss */
 .picker__date-display {
   text-align: center;
-  background-color: #26a69a;
+  background-color: #fbc02d;
   color: #fff;
   padding-bottom: 15px;
   font-weight: 300;
@@ -8774,12 +8774,12 @@ input[type=range]:focus::-ms-fill-upper {
 .picker__nav--next:hover {
   cursor: pointer;
   color: #000000;
-  background: #a1ded8;
+  background: #fcf3df;
 }
 
 /* line 329, ../sass/components/date_picker/_default.date.scss */
 .picker__weekday-display {
-  background-color: #1f897f;
+  background-color: #fab50a;
   padding: 10px;
   font-weight: 200;
   letter-spacing: .5;
@@ -8836,7 +8836,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 /* line 378, ../sass/components/date_picker/_default.date.scss */
 .picker__day.picker__day--today {
-  color: #26a69a;
+  color: #fbc02d;
 }
 
 /* line 382, ../sass/components/date_picker/_default.date.scss */
@@ -8855,14 +8855,14 @@ input[type=range]:focus::-ms-fill-upper {
 .picker--focused .picker__day--selected {
   border-radius: 50%;
   transform: scale(0.9);
-  background-color: #26a69a;
+  background-color: #fbc02d;
   color: #ffffff;
 }
 /* line 399, ../sass/components/date_picker/_default.date.scss */
 .picker__day--selected.picker__day--outfocus,
 .picker__day--selected:hover.picker__day--outfocus,
 .picker--focused .picker__day--selected.picker__day--outfocus {
-  background-color: #a1ded8;
+  background-color: #fcf3df;
 }
 
 /* line 405, ../sass/components/date_picker/_default.date.scss */
@@ -8875,7 +8875,7 @@ input[type=range]:focus::-ms-fill-upper {
 .picker__close, .picker__today {
   font-size: 1.1rem;
   padding: 0 1rem;
-  color: #26a69a;
+  color: #fbc02d;
 }
 
 /* line 418, ../sass/components/date_picker/_default.date.scss */
@@ -8899,7 +8899,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 /* line 433, ../sass/components/date_picker/_default.date.scss */
 button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
-  background-color: #a1ded8;
+  background-color: #fcf3df;
 }
 
 /* ==========================================================================
