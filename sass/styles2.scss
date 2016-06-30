@@ -22,7 +22,8 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  //width: 50%;
+  width: 100%;
   height: 100%;
   -webkit-box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
   -moz-box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
@@ -38,6 +39,7 @@ nav {
     padding: 20% 0;
     border-radius: 50%;
     position: relative;
+    cursor: help;
     .card-content {
       position: absolute;
       //top: 20%;
@@ -53,13 +55,13 @@ nav {
         margin: 0;
         &.heading {
           text-transform: lowercase;
-          font-size: 22px;
+          font-size: 18px;
         }
         &.text {
           margin-top: -15px;
-          font-size: 60px;
+          font-size: 42px;
           span {
-            font-size: 32px;
+            font-size: 23px;
             vertical-align: super;
           }
         }
@@ -67,6 +69,7 @@ nav {
           color: darkgray;
           cursor: pointer;
           display: none;
+          margin-top: -5px;
           &:hover {
             color: #f9a825;
             transition: color 300ms;
@@ -113,31 +116,35 @@ form {
   right: 0;
   width: 50%;
   height: 100%;
+  display:none;
 
   .map {
     height: 100%;
   }
 }
 
-@media screen and (max-width: 680px) {
-  #price-card {
-    .card-content {
-      p {
-        &.heading {
-          font-size: 16px !important;
-        }
-        &.text {
-          font-size: 38px !important;
-          span {
-            font-size: 21px !important;
-          }
-        }
-      }
-    }
+.modal .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=40);
+  opacity: .4;
+  &:hover {
+    text-shadow: none;
+    filter: alpha(opacity=20);
+    opacity: .2;
   }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (min-width: 681px) {
+  .valign-wrapper {
+    width: 50%;
+  }
+  .map-container {
+    display: block;
+  }
   #price-card {
     width: 60% !important;
     padding: 30% 0 !important;
@@ -156,20 +163,33 @@ form {
       }
     }
   }
-
-  // .valign-wrapper {
-  //   width: 100%;
-  // }
-  //
-  // .map-container {
-  //   display: none;
-  // }
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (min-width: 901px) {
   #price-card {
     width: 55% !important;
     padding: 27.5% 0 !important;
+    .card-content {
+      //top: 27.5% !important;
+      p {
+        &.heading {
+          font-size: 22px !important;
+        }
+        &.text {
+          font-size: 60px !important;
+          span {
+            font-size: 32px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  #price-card {
+    width: 40% !important;
+    padding: 20% 0 !important;
     .card-content {
       //top: 27.5% !important;
       p {

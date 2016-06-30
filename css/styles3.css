@@ -2,27 +2,27 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 6, ../sass/styles.scss */
+/* line 6, ../sass/styles3.scss */
 html, body {
   height: 100%;
 }
 
-/* line 11, ../sass/styles.scss */
+/* line 11, ../sass/styles3.scss */
 nav .nav-wrapper {
   padding: 0 25px;
 }
-/* line 14, ../sass/styles.scss */
+/* line 14, ../sass/styles3.scss */
 nav .nav-wrapper .brand-logo {
   color: #fbc02d;
   font-size: 1.7rem;
 }
 
-/* line 21, ../sass/styles.scss */
+/* line 21, ../sass/styles3.scss */
 .valign-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
   -webkit-box-shadow: 7px 0px 13px 0px rgba(64, 64, 64, 0.65);
   -moz-box-shadow: 7px 0px 13px 0px rgba(64, 64, 64, 0.65);
@@ -30,7 +30,7 @@ nav .nav-wrapper .brand-logo {
   z-index: 1;
 }
 
-/* line 34, ../sass/styles.scss */
+/* line 35, ../sass/styles3.scss */
 .card#price-card {
   width: 40%;
   margin: 0 auto;
@@ -39,150 +39,130 @@ nav .nav-wrapper .brand-logo {
   border-radius: 50%;
   position: relative;
 }
-/* line 41, ../sass/styles.scss */
+/* line 42, ../sass/styles3.scss */
 .card#price-card .card-content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-/* line 47, ../sass/styles.scss */
+/* line 48, ../sass/styles3.scss */
 .card#price-card .card-content .hidden {
   display: none !important;
 }
-/* line 50, ../sass/styles.scss */
+/* line 51, ../sass/styles3.scss */
 .card#price-card .card-content p {
   color: #fbc02d;
   text-align: center;
   margin: 0;
 }
-/* line 54, ../sass/styles.scss */
+/* line 55, ../sass/styles3.scss */
 .card#price-card .card-content p.heading {
   text-transform: lowercase;
-  font-size: 22px;
+  font-size: 2.7vh;
 }
-/* line 58, ../sass/styles.scss */
+/* line 59, ../sass/styles3.scss */
 .card#price-card .card-content p.text {
   margin-top: -15px;
-  font-size: 60px;
+  font-size: 8.3vh;
 }
-/* line 61, ../sass/styles.scss */
+/* line 62, ../sass/styles3.scss */
 .card#price-card .card-content p.text span {
-  font-size: 32px;
+  font-size: 4.5vh;
   vertical-align: super;
 }
-/* line 66, ../sass/styles.scss */
+/* line 67, ../sass/styles3.scss */
 .card#price-card .card-content p.link {
   color: darkgray;
   cursor: pointer;
   display: none;
 }
-/* line 70, ../sass/styles.scss */
+/* line 71, ../sass/styles3.scss */
 .card#price-card .card-content p.link:hover {
   color: #f9a825;
   transition: color 300ms;
 }
-/* line 76, ../sass/styles.scss */
+/* line 77, ../sass/styles3.scss */
 .card#price-card .card-content .preloader-wrapper {
   display: block;
   margin: auto;
 }
-/* line 82, ../sass/styles.scss */
+/* line 83, ../sass/styles3.scss */
 .card#history-card {
   display: none;
   width: 80%;
   margin: 20px auto 0;
 }
-/* line 87, ../sass/styles.scss */
+/* line 88, ../sass/styles3.scss */
 .card#location-card {
   width: 65%;
   margin: 35px auto 0;
 }
 
-/* line 93, ../sass/styles.scss */
+/* line 94, ../sass/styles3.scss */
 form {
   color: #000;
   text-align: center;
 }
-/* line 96, ../sass/styles.scss */
+/* line 97, ../sass/styles3.scss */
 form .row {
   margin-bottom: 0;
 }
-/* line 99, ../sass/styles.scss */
+/* line 100, ../sass/styles3.scss */
 form #inputRange {
   margin-top: 5px;
 }
-/* line 102, ../sass/styles.scss */
+/* line 103, ../sass/styles3.scss */
 form [disabled].noUi-target .range-label {
   background-color: #B8B8B8;
 }
-/* line 105, ../sass/styles.scss */
+/* line 106, ../sass/styles3.scss */
 form a {
   margin-top: 25px;
 }
 
-/* line 110, ../sass/styles.scss */
+/* line 111, ../sass/styles3.scss */
 .map-container {
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
+  display: none;
 }
-/* line 117, ../sass/styles.scss */
+/* line 119, ../sass/styles3.scss */
 .map-container .map {
   height: 100%;
 }
 
-@media screen and (max-width: 680px) {
-  /* line 126, ../sass/styles.scss */
-  #price-card .card-content p.heading {
-    font-size: 16px !important;
+@media screen and (min-width: 681px) {
+  /* line 125, ../sass/styles3.scss */
+  .valign-wrapper {
+    width: 50%;
   }
-  /* line 129, ../sass/styles.scss */
-  #price-card .card-content p.text {
-    font-size: 38px !important;
+
+  /* line 128, ../sass/styles3.scss */
+  .map-container {
+    display: block;
   }
-  /* line 131, ../sass/styles.scss */
-  #price-card .card-content p.text span {
-    font-size: 21px !important;
-  }
-}
-@media screen and (max-width: 899px) {
-  /* line 141, ../sass/styles.scss */
+
+  /* line 131, ../sass/styles3.scss */
   #price-card {
     width: 60% !important;
     padding: 30% 0 !important;
   }
-  /* line 147, ../sass/styles.scss */
-  #price-card .card-content p.heading {
-    font-size: 19px !important;
-  }
-  /* line 150, ../sass/styles.scss */
-  #price-card .card-content p.text {
-    font-size: 45px !important;
-  }
-  /* line 152, ../sass/styles.scss */
-  #price-card .card-content p.text span {
-    font-size: 25px !important;
-  }
 }
-@media screen and (max-width: 1399px) {
-  /* line 170, ../sass/styles.scss */
+@media screen and (min-width: 901px) {
+  /* line 138, ../sass/styles3.scss */
   #price-card {
     width: 55% !important;
     padding: 27.5% 0 !important;
   }
-  /* line 176, ../sass/styles.scss */
-  #price-card .card-content p.heading {
-    font-size: 22px !important;
-  }
-  /* line 179, ../sass/styles.scss */
-  #price-card .card-content p.text {
-    font-size: 60px !important;
-  }
-  /* line 181, ../sass/styles.scss */
-  #price-card .card-content p.text span {
-    font-size: 32px !important;
+}
+@media screen and (min-width: 1201px) {
+  /* line 145, ../sass/styles3.scss */
+  #price-card {
+    width: 40% !important;
+    padding: 20% 0 !important;
   }
 }

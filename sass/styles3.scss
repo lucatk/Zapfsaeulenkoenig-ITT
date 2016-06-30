@@ -22,7 +22,8 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  //width: 50%;
+  width: 100%;
   height: 100%;
   -webkit-box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
   -moz-box-shadow: 7px 0px 13px 0px rgba(64,64,64,0.65);
@@ -53,13 +54,13 @@ nav {
         margin: 0;
         &.heading {
           text-transform: lowercase;
-          font-size: 22px;
+          font-size: 2.7vh;
         }
         &.text {
           margin-top: -15px;
-          font-size: 60px;
+          font-size: 8.3vh;
           span {
-            font-size: 32px;
+            font-size: 4.5vh;
             vertical-align: super;
           }
         }
@@ -113,76 +114,36 @@ form {
   right: 0;
   width: 50%;
   height: 100%;
+  display:none;
 
   .map {
     height: 100%;
   }
 }
 
-@media screen and (max-width: 680px) {
-  #price-card {
-    .card-content {
-      p {
-        &.heading {
-          font-size: 16px !important;
-        }
-        &.text {
-          font-size: 38px !important;
-          span {
-            font-size: 21px !important;
-          }
-        }
-      }
-    }
+@media screen and (min-width: 681px) {
+  .valign-wrapper {
+    width: 50%;
   }
-}
-
-@media screen and (max-width: 899px) {
+  .map-container {
+    display: block;
+  }
   #price-card {
     width: 60% !important;
     padding: 30% 0 !important;
-    .card-content {
-      //top: 30% !important;
-      p {
-        &.heading {
-          font-size: 19px !important;
-        }
-        &.text {
-          font-size: 45px !important;
-          span {
-            font-size: 25px !important;
-          }
-        }
-      }
-    }
   }
-
-  // .valign-wrapper {
-  //   width: 100%;
-  // }
-  //
-  // .map-container {
-  //   display: none;
-  // }
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (min-width: 901px) {
   #price-card {
     width: 55% !important;
     padding: 27.5% 0 !important;
-    .card-content {
-      //top: 27.5% !important;
-      p {
-        &.heading {
-          font-size: 22px !important;
-        }
-        &.text {
-          font-size: 60px !important;
-          span {
-            font-size: 32px !important;
-          }
-        }
-      }
-    }
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  #price-card {
+    width: 40% !important;
+    padding: 20% 0 !important;
   }
 }
