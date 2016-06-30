@@ -1,15 +1,18 @@
 <?php $conf = include('config.php');
 
+// Eingaben runden (um in DB zu speichern)
 $lat = round($_POST["lat"], 7);
 $lng = round($_POST["lng"], 7);
 $radius = $_POST["radius"];
 $type = $_POST["type"];
 
+// Verbindung zu MySQL
 $db = new mysqli($conf['dbHost'], $conf['dbUsername'], $conf['dbPassword'], $conf['dbDatabase']);
 if($db->connect_errno > 0) {
     die('Unable to connect to database [' . $db->connect_error . ']');
 }
 
+// Lade vorherige Suchen von DB
 $stmt = $db->prepare("SELECT * FROM `searches` WHERE `query` = ?");
 $query = "$lat;$lng;$radius;$type";
 $stmt->bind_param('s', $query);
@@ -21,13 +24,14 @@ if($stmt->num_rows > 0) {
   $stmt->bind_result($colQuery, $colLastSearch, $colResult);
   $stmt->fetch();
   if(time() - strtotime($colLastSearch) < 240) {
+    // Falls Suche nicht laenger als 4 Minuten her ist, nicht neu suchen
     $refresh = false;
     $json = json_decode($colResult);
   }
 }
 $stmt->close();
 if($refresh) {
-
+  // Falls Suche laenger als 4 Minuten her ist, neu suchen.
   $jsonEncoded = file_get_contents('https://creativecommons.tankerkoenig.de/json/list.php'
       ."?lat=$lat"     // geographische Breite
       ."&lng=$lng"     //               Länge
@@ -37,6 +41,7 @@ if($refresh) {
       ."&apikey={$conf['apiKey']}");
   $json = json_decode($jsonEncoded);
 
+  // Suchergebnis in DB eintragen
   $stmt = $db->prepare("INSERT INTO `searches` (`query`, `lastSearch`, `result`) VALUES (?, CURRENT_TIMESTAMP(), ?) ON DUPLICATE KEY UPDATE `lastSearch` = CURRENT_TIMESTAMP(), `result` = VALUES(`result`)");
   $query = "$lat;$lng;$radius;$type";
   $stmt->bind_param('ss', $query, $jsonEncoded);
@@ -51,6 +56,7 @@ if($refresh) {
       $stmt->close();
 
       if($station->isOpen) {
+        // Preise der Tankstellen entragen wenn geoeffnet
         $stmt = $db->prepare("SELECT * FROM `preise` WHERE `id` = ?");
         $hour = date('H');
         $id = "{$station->id}_{$type}_{$hour}";
@@ -59,6 +65,7 @@ if($refresh) {
         $stmt->store_result();
 
         if($stmt->num_rows > 0) {
+          // Falls Preis schon eingetragen, alten Preis updaten
           $stmt->bind_result($colId, $colUpdated, $colAvg, $colAvgCount);
           $stmt->fetch();
           $average = $colAvg;
@@ -77,6 +84,7 @@ if($refresh) {
             $stmt->close();
           }
         } else {
+          // Ansonsten neuen Preis eintragen
           $stmt->close();
           $stmt = $db->prepare("INSERT INTO `preise` (`id`, `updated`, `average`, `avgCount`) VALUES(?, CURDATE(), ?, 1)");
           $hour = date('H');
@@ -97,6 +105,7 @@ if(!array_key_exists('stations', $json) || count($json->stations) < 1) {
 } else {
   $bestStation = $json->stations[0];
 
+  // Preishistorie der besten Tankstelle laden
   $stmt = $db->prepare("SELECT * FROM `preise` WHERE `id` LIKE ?");
   $id = "{$bestStation->id}_{$type}_%";
   $stmt->bind_param('s', $id);
